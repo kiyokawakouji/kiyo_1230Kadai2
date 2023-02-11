@@ -16,21 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-LY-R1J">
-                                <rect key="frame" x="148" y="236" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-LY-R1J">
+                                <rect key="frame" x="148" y="420" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-5k-ysN">
-                                <rect key="frame" x="148" y="302" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-5k-ysN">
+                                <rect key="frame" x="148" y="478" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ne0-NM-mKN">
-                                <rect key="frame" x="131" y="438" width="131" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ne0-NM-mKN">
+                                <rect key="frame" x="131" y="560" width="131" height="32"/>
                                 <segments>
                                     <segment title="+"/>
                                     <segment title="-"/>
@@ -38,39 +35,55 @@
                                     <segment title="÷"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
-                                <connections>
-                                    <action selector="actionSegmentedControll:" destination="BYZ-38-t0r" eventType="valueChanged" id="ENB-Lc-3jp"/>
-                                </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-M2-XDl">
-                                <rect key="frame" x="159" y="523" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-M2-XDl">
+                                <rect key="frame" x="159" y="639" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="calculationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIR-y9-bxh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5D-Io-Gpt">
-                                <rect key="frame" x="135" y="371" width="122" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5D-Io-Gpt">
+                                <rect key="frame" x="60" y="178" width="273" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="218" id="4e5-bw-NZ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dkI-M2-XDl" secondAttribute="trailing" constant="159" id="2Kq-e3-fiJ"/>
+                            <constraint firstItem="dkI-M2-XDl" firstAttribute="top" secondItem="ne0-NM-mKN" secondAttribute="bottom" constant="48" id="3TR-fr-mj9"/>
+                            <constraint firstItem="bEr-5k-ysN" firstAttribute="top" secondItem="nmn-LY-R1J" secondAttribute="bottom" constant="24" id="5nN-T8-cet"/>
+                            <constraint firstItem="ne0-NM-mKN" firstAttribute="top" secondItem="bEr-5k-ysN" secondAttribute="bottom" constant="48" id="95w-sr-lap"/>
+                            <constraint firstItem="dkI-M2-XDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="IQJ-rg-IxF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dkI-M2-XDl" secondAttribute="bottom" constant="144" id="ME3-q2-yyc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n5D-Io-Gpt" secondAttribute="trailing" constant="60" id="OME-ER-460"/>
+                            <constraint firstItem="nmn-LY-R1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="Y3U-bj-DMk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmn-LY-R1J" secondAttribute="trailing" constant="148" id="YGv-AU-ICa"/>
+                            <constraint firstItem="n5D-Io-Gpt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="cEf-Vv-pOA"/>
+                            <constraint firstItem="ne0-NM-mKN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="dxA-Pd-yAM"/>
+                            <constraint firstItem="nmn-LY-R1J" firstAttribute="top" secondItem="n5D-Io-Gpt" secondAttribute="bottom" constant="24" id="dzK-Yj-mJb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ne0-NM-mKN" secondAttribute="trailing" constant="131" id="f6A-Kr-qKm"/>
+                            <constraint firstItem="bEr-5k-ysN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="q1m-Gv-V3f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bEr-5k-ysN" secondAttribute="trailing" constant="148" id="s6P-SG-S6s"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="calculationResult" destination="n5D-Io-Gpt" id="Lmo-D6-nJt"/>
                         <outlet property="firstTextField" destination="nmn-LY-R1J" id="RqP-PO-QjW"/>
-                        <outlet property="result" destination="n5D-Io-Gpt" id="cdy-dl-hTX"/>
                         <outlet property="secondTextField" destination="bEr-5k-ysN" id="QKo-sO-0fv"/>
+                        <outlet property="segmentedControl" destination="ne0-NM-mKN" id="iYM-v6-kL1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.64122137404578" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>

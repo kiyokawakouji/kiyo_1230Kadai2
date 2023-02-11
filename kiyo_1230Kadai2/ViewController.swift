@@ -12,30 +12,45 @@ class ViewController: UIViewController {
     @IBOutlet private weak var firstTextField: UITextField!
     @IBOutlet private weak var secondTextField: UITextField!
 
-    @IBOutlet private weak var result: UILabel!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    @IBOutlet private weak var calculationResult: UILabel!
+    private let resultErrorText: String = "割り算とは「逆数をかけること」である\nつまり「 0で割る」とは\n「 0の逆数をかける」ことを意味する\nしかし、0には逆数がないので「 0の逆数をかける」という行為自体が存在せず、\n0で割ることを定義できない。\nだから 0で割ってはいけない"
 
-    @IBAction func actionSegmentedControll(_ sender: Any) {
-        switch (sender as AnyObject).selectedSegmentIndex {
-        case 0:
-            result.text = "りんご🍎"
-        case 1:
-            result.text = "バナナ🍌"
-        case 2:
-            result.text = "ぶどう🍇"
-        case 3:
-            result.text = "いちご🍓"
-        default :
-            print("該当なし")
-        }
+
+    enum CalculationFormula:Int {
+        case addition
+        case subtraction
+        case multiplication
+        case division
     }
 
-    @IBAction func calculationButton(_ sender: Any) {
+    @IBAction private func calculationButton(_ sender: Any) {
         let inputNumber1 = Int(firstTextField.text ?? "") ?? 0
         let inputNumber2 = Int(secondTextField.text ?? "") ?? 0
+        actionSegmentedControl(number1: inputNumber1, number2: inputNumber2)
+    }
 
+    private func actionSegmentedControl(number1: Int, number2: Int) {
+        let index = segmentedControl.selectedSegmentIndex
+        guard let CalculationFormula = CalculationFormula(rawValue: index) else {
+                    return
+                }
+        let result: String
 
-
-        // self.result.text = "\(result)"
+        switch CalculationFormula {
+        case .addition:
+            result = String(number1 + number2)
+        case .subtraction:
+            result = String(number1 - number2)
+        case .multiplication:
+            result = String(number1 * number2)
+        case .division:
+            if number2 == 0 {
+                result = resultErrorText
+            } else {
+                result = String(number1 / number2)
+            }
+        }
+        calculationResult.text = "\(result)"
     }
 }
-
