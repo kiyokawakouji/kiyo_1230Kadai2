@@ -9,17 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //TODO: Textfieldを2つ設置
-    //TODO: SegmentedControlを設置
-    //TODO: +-*/を設置
-    //TODO: resultLabelを設置
-    //TODO: Buttonを設置
+    @IBOutlet private weak var firstTextField: UITextField!
+    @IBOutlet private weak var secondTextField: UITextField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet private weak var result: UILabel!
+
+    @IBAction func actionSegmentedControll(_ sender: Any) {
+        switch (sender as AnyObject).selectedSegmentIndex {
+        case 0:
+            result.text = "りんご🍎"
+        case 1:
+            result.text = "バナナ🍌"
+        case 2:
+            result.text = "ぶどう🍇"
+        case 3:
+            result.text = "いちご🍓"
+        default :
+            print("該当なし")
+        }
     }
 
+    @IBAction func calculationButton(_ sender: Any) {
+        let inputNumber1 = Int(firstTextField.text ?? "") ?? 0
+        let inputNumber2 = Int(secondTextField.text ?? "") ?? 0
 
+
+
+        // self.result.text = "\(result)"
+    }
 }
 
