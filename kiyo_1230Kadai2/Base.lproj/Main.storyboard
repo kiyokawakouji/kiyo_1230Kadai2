@@ -37,7 +37,7 @@
                                 <color key="selectedSegmentTintColor" systemColor="systemGreenColor"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-M2-XDl">
-                                <rect key="frame" x="159" y="639" width="75" height="35"/>
+                                <rect key="frame" x="144" y="639" width="105" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -57,15 +57,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dkI-M2-XDl" secondAttribute="trailing" constant="159" id="2Kq-e3-fiJ"/>
                             <constraint firstItem="dkI-M2-XDl" firstAttribute="top" secondItem="ne0-NM-mKN" secondAttribute="bottom" constant="48" id="3TR-fr-mj9"/>
                             <constraint firstItem="bEr-5k-ysN" firstAttribute="top" secondItem="nmn-LY-R1J" secondAttribute="bottom" constant="24" id="5nN-T8-cet"/>
                             <constraint firstItem="ne0-NM-mKN" firstAttribute="top" secondItem="bEr-5k-ysN" secondAttribute="bottom" constant="48" id="95w-sr-lap"/>
-                            <constraint firstItem="dkI-M2-XDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="IQJ-rg-IxF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dkI-M2-XDl" secondAttribute="trailing" constant="144" id="DKU-4c-fjk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dkI-M2-XDl" secondAttribute="bottom" constant="144" id="ME3-q2-yyc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n5D-Io-Gpt" secondAttribute="trailing" constant="60" id="OME-ER-460"/>
                             <constraint firstItem="nmn-LY-R1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="Y3U-bj-DMk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nmn-LY-R1J" secondAttribute="trailing" constant="148" id="YGv-AU-ICa"/>
+                            <constraint firstItem="dkI-M2-XDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="aoJ-NV-nTJ"/>
                             <constraint firstItem="n5D-Io-Gpt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="cEf-Vv-pOA"/>
                             <constraint firstItem="ne0-NM-mKN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="dxA-Pd-yAM"/>
                             <constraint firstItem="nmn-LY-R1J" firstAttribute="top" secondItem="n5D-Io-Gpt" secondAttribute="bottom" constant="24" id="dzK-Yj-mJb"/>
