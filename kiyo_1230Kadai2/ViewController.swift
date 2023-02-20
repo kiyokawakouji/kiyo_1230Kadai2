@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     @IBOutlet private weak var calculationResult: UILabel!
-    private let resultErrorText: String = "割り算とは「逆数をかけること」である\nつまり「 0で割る」とは\n「 0の逆数をかける」ことを意味する\nしかし、0には逆数がないので「 0の逆数をかける」という行為自体が存在せず、\n0で割ることを定義できない。\nだから 0で割ってはいけない"
+    private let resultErrorText: String = "割る数には0以外を入力して下さい"
 
 
     enum CalculationFormula:Float {
@@ -25,19 +25,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func calculationButton(_ sender: Any) {
-        let inputNumber1 = Float(firstTextField.text ?? "") ?? 0
-        let inputNumber2 = Float(secondTextField.text ?? "") ?? 0
+        let inputNumber1 = Int(firstTextField.text ?? "") ?? 0
+        let inputNumber2 = Int(secondTextField.text ?? "") ?? 0
         actionSegmentedControl(number1: inputNumber1, number2: inputNumber2)
     }
 
-    private func actionSegmentedControl(number1: Float, number2: Float) {
+    private func actionSegmentedControl(number1: Int, number2: Int) {
         let index = segmentedControl.selectedSegmentIndex
-        guard let CalculationFormula = CalculationFormula(rawValue: Float(index)) else {
+        guard let calculationFormula = CalculationFormula(rawValue: Float(index)) else {
                     return
                 }
         let result: String
 
-        switch CalculationFormula {
+        switch calculationFormula {
         case .addition:
             result = String(number1 + number2)
         case .subtraction:
